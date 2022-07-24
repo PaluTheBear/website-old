@@ -1,5 +1,5 @@
 import "./Header.css"
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 type INavItemProps = {
     title: string,
@@ -8,7 +8,14 @@ type INavItemProps = {
 
 const NavItem = (props: INavItemProps) => {
     return (
-        <Link to={props.destination} key={props.title} className="nav-item">{props.title}</Link>
+        <NavLink
+            to={props.destination}
+            key={props.title}
+            className={({ isActive }) =>
+                isActive ? "nav-item-active" : "nav-item"}
+        >
+            {props.title}
+        </NavLink>
     )
 }
 
