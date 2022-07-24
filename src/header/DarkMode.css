@@ -1,0 +1,44 @@
+:root {
+    --primary-bg-color: #fff;
+    --primary-bg-color-inverted: #222;
+    --secondary-bg-color: #f6f6f6;
+    --primary-text-color: #222;
+    --primary-text-color-inverted: #fff;
+    --secondary-text-color: #000;
+    --link-color: cornflowerblue;
+}
+
+[color-theme="Dark"] {
+    --primary-bg-color: #2a2a2a;
+    --primary-bg-color-inverted: #fff;
+    --secondary-bg-color: #222;
+    --primary-text-color: #fff;
+    --primary-text-color-inverted: #222;
+    --secondary-text-color: #eee;
+    --link-color: lightblue;
+}
+
+.darkmode-wrapper {
+    margin-right: 5em;
+    margin-left: auto;
+}
+
+.darkmode-wrapper:hover {
+    cursor: pointer;
+    color: var(--link-color);
+}
+
+body {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+@media screen and (max-width: 750px){
+    .darkmode-wrapper {
+        visibility: hidden;
+    }
+}

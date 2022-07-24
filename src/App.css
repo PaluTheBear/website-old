@@ -1,0 +1,30 @@
+.App {
+    width: calc(100vw - 2em);
+    margin: 1em 1em 1em 1em;
+}
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    background-color: var(--primary-bg-color);
+    width: 100%;
+    height: auto;
+    padding-top: 1em;
+
+    margin-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--secondary-bg-color);
+    border-bottom-width: 1px;
+}
+
+.div-link {
+    text-decoration: none;
+    color: var(--primary-text-color);
+
+}

@@ -1,0 +1,9 @@
+.blog-preview-wrapper {
+    background-color: var(--secondary-bg-color);
+    width: 80vw;
+    margin-bottom: 1em;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

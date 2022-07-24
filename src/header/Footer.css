@@ -1,0 +1,19 @@
+
+.footer {
+    background-color: var(--primary-bg-color);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.footer img{
+    width: 1.5em;
+    margin: 0.5em 1em 0.5em 1em;
+    filter: grayscale(100%);
+}
+
