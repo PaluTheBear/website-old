@@ -4,7 +4,7 @@ import BlogPreviewTile from "./tiles/BlogPreviewTile";
 import MainpagePresentation from "./tiles/MainpagePresentation";
 import {IBlogPreviewProps} from "./tiles/BlogPreview";
 import {lorem} from "../util/Helperfunctions";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const getArticles = ():IBlogPreviewProps[] => {
     const articles = [

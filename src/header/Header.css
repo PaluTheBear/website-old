@@ -1,7 +1,7 @@
 
 .header {
     background-color: var(--primary-bg-color);
-    width: 100%;
+    width: calc(100vw - 2em);
     min-height: 10vh;
 
     position: fixed;
