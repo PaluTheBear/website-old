@@ -21,8 +21,8 @@ root.render(
             <Route path="/" element={<App />} >
                 <Route index element={<Home />} />
                 <Route path="about" element={<Contact />} />
-                {/*ToDo: Gallery:
-                <Route path="gallery" element={<Gallery />} /> */}
+                {/*ToDo: Gallery: */}
+                <Route path="gallery" element={<Gallery />} />
                 <Route path="blog" element={<Blog />} >
                     <Route path=":blogId" element={<Blog />} />
                 </Route>
