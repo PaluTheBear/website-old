@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.90dcb12f.css",
+    "main.js": "/static/js/main.70b5372c.js",
+    "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
+    "static/media/portrait.jpeg": "/static/media/portrait.7914fc3af50fedc1eadb.jpeg",
+    "static/media/capitan.jpg": "/static/media/capitan.647fef5a5de5a03233de.jpg",
+    "index.html": "/index.html",
+    "main.90dcb12f.css.map": "/static/css/main.90dcb12f.css.map",
+    "main.70b5372c.js.map": "/static/js/main.70b5372c.js.map",
+    "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90dcb12f.css",
+    "static/js/main.70b5372c.js"
+  ]
+}
