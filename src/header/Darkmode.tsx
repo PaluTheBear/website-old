@@ -1,6 +1,5 @@
 import "./DarkMode.css"
 import {useEffect, useState} from "react";
-import {ifError} from "assert";
 
 const DARK = "Dark";
 const LIGHT = "Light";
@@ -26,7 +25,7 @@ const Darkmode = () => {
         } else {
             preferredDark ? setDarkMode() : setLightMode();
         }
-    }, [])
+    })
 
     const setDarkMode = () => {
         localStorage.setItem(THEME, DARK);

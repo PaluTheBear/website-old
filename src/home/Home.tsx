@@ -4,7 +4,6 @@ import BlogPreviewTile from "./tiles/BlogPreviewTile";
 import MainpagePresentation from "./tiles/MainpagePresentation";
 import {IBlogPreviewProps} from "./tiles/BlogPreview";
 import {lorem} from "../util/Helperfunctions";
-import {useState} from "react";
 
 const getArticles = ():IBlogPreviewProps[] => {
     const articles = [
@@ -20,14 +19,12 @@ const getArticles = ():IBlogPreviewProps[] => {
 }
 
 const Home = () => {
-    const [articles, setArticles] = useState("")
-
     return (
         <div className="main-wrapper">
             <HeroTile>
                 {() => <MainpagePresentation />}
             </HeroTile>
-            {articles.length > 0 &&
+            {false &&
                 <BlogPreviewTile blogArticles={getArticles()} />
             }
         </div>
