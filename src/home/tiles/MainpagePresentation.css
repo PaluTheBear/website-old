@@ -13,6 +13,8 @@
 }
 
 .hero-title {
+    margin-left: 1em;
+    margin-right: 1em;
     text-align: center;
 }
 
@@ -31,7 +33,6 @@
 
 #hero-image {
     width: 350px;
-    transform: rotateY(180deg);
 }
 
 

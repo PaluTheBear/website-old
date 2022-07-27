@@ -1,3 +1,4 @@
+*.ds_store
 *.iml
 .idea/*
 package-lock.json

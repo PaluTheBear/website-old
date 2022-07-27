@@ -2,7 +2,7 @@
 .header {
     background-color: var(--primary-bg-color);
     width: calc(100vw - 2em);
-    min-height: 10vh;
+    height: 10vh;
 
     position: fixed;
     top: 0;
