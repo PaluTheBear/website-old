@@ -6,6 +6,7 @@
     --primary-text-color-inverted: #fff;
     --secondary-text-color: #000;
     --link-color: cornflowerblue;
+    --inverse-filter: 0%;
 }
 
 [color-theme="Dark"] {
@@ -16,6 +17,7 @@
     --primary-text-color-inverted: #222;
     --secondary-text-color: #eee;
     --link-color: lightblue;
+    --inverse-filter: 100%;
 }
 
 .darkmode-wrapper {

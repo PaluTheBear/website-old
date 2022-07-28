@@ -1,3 +1,5 @@
+import './TextTile.css'
+
 type BlogTileProps = {
     children(): JSX.Element
 }

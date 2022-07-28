@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,12 +7,12 @@ import Home from "./home/Home";
 import Contact from "./about/Contact";
 import Gallery from "./gallery/Gallery";
 import Error404 from "./Error404";
-import Blog from "./blog/Blog";
 import ScrollToTop from "./util/ScrollToTop";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
     <BrowserRouter>
         <ScrollToTop />
@@ -21,11 +20,7 @@ root.render(
             <Route path="/" element={<App />} >
                 <Route index element={<Home />} />
                 <Route path="about" element={<Contact />} />
-                {/*ToDo: Gallery: */}
                 <Route path="gallery" element={<Gallery />} />
-                <Route path="blog" element={<Blog />} >
-                    <Route path=":blogId" element={<Blog />} />
-                </Route>
                 <Route
                     path="*"
                     element={<Error404 />}

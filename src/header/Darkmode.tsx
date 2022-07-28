@@ -12,7 +12,7 @@ const Darkmode = () => {
     const preferredDark =
         window.matchMedia &&
         window.matchMedia('(prefers-color-scheme: dark)').matches;
-
+    
     const [displayed, setDisplayed] = useState(DARK)
 
     useEffect(() => {
@@ -30,12 +30,25 @@ const Darkmode = () => {
     const setDarkMode = () => {
         localStorage.setItem(THEME, DARK);
         document.documentElement.setAttribute(COLOR_THEME, DARK);
+        const elem = document.getElementsByTagName("META")[2]
+        // @ts-ignore
+        if (elem.name === "theme-color"){
+            // @ts-ignore
+            elem.content = "222";
+        }
+        
         setDisplayed(LIGHT);
     }
 
     const setLightMode = () => {
         localStorage.setItem(THEME, LIGHT);
         document.documentElement.setAttribute(COLOR_THEME,  LIGHT)
+        const elem = document.getElementsByTagName("META")[2]
+        // @ts-ignore
+        if (elem.name === "theme-color"){
+            // @ts-ignore
+            elem.content = "#f6f6f6";
+        }
         setDisplayed(DARK);
     }
 

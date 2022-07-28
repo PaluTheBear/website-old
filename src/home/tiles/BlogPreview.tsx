@@ -15,11 +15,11 @@ const BlogPreview = (props: IBlogPreviewProps) => {
     const subtitle = props.subtitle || ""
     const trimmedSubtitle = subtitle.length > 120 ? subtitle.substring(0, 120).trim() + "..." : subtitle
 
-    const link = "/blog/" + createLinkFromDateAndTitle(props.date, props.title);
+    const link = createLinkFromDateAndTitle(props.date, props.title);
 
     return (
         <div className="blog-preview-kachel">
-            <Link to={link} className="div-link">
+            <Link to={link} className="div-link" target="_blank">
                 <img id="blog-preview-image" src={props.picture} alt=""/>
                 <h2 id="blog-preview-title">{props.title}</h2>
                 <p id="blog-preview-subtitle">{trimmedSubtitle || ""}</p>

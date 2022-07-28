@@ -1,0 +1,84 @@
+#!/usr/bin/python3
+
+# -*- coding: UTF8 -*-
+"""Publish Blogposts Script
+
+The purpose of this script is to automatically convert blogposts written in markdown to convert and publish them on my homepage.
+To complete this task, it will do the following 3 steps.
+    1) parse blogpost to read metadata, then use pandoc to convert it to static html file
+    2) write metadata in json file, used by my server to render previews.
+    3) automatically commit and publish everything
+
+Requirements:
+    * pandoc
+
+Example:
+    $ publish -i input.md -o output.html -t template.html
+    This example will parse and transform input.md into output.html using template.html as pandoc template.
+"""
+
+import argparse
+import sys
+import logging
+from logging import critical, error, warning, info, debug
+
+def parse_arguments():
+    """Reads the given arguments from command line"""
+    argParser = argparse.ArgumentParser()
+    
+    HELP_I = 'Input file, markdown file. Needs to set following arguments as meta variables:\n\ttitle,\n\tauthor,\n\tdate\n\t(format: yy-mm-dd),\n\tpicture (href string)'
+    HELP_D = 'Path to folder where target files will be placed'
+    HELP_T = 'Template file. Will be given to pandoc to use as template when converting.'
+    HELP_V = 'Verbosity of logging: 0 -critical, 1- error, 2 -warning, 3 -info, 4 -debug'
+
+    argParser.add_argument('-i', 
+                           metavar='input_file', 
+                           required=True,
+                           help=HELP_I)
+    argParser.add_argument('-d', 
+                           metavar='target_directory', 
+                           required=True,
+                           help=HELP_D)
+    argParser.add_argument('-t', 
+                           metavar='template', 
+                           required=False,
+                           help=HELP_T)
+    argParser.add_argument('-v', 
+                           metavar='verbosity', 
+                           required=False, 
+                           default=2, 
+                           type=int,
+                           help=HELP_V)
+
+    args = argParser.parse_args()
+
+    verbosity = {0: logging.CRITICAL, 1: logging.ERROR, 2: logging.WARNING, 3: logging.INFO, 4: logging.DEBUG}
+    logging.basicConfig(format='%(message)s', level=verbosity[args.v], stream=sys.stderr)
+    debug("logging started.")
+
+    return args
+
+def parse_markdown_file():
+    pass
+
+def convert_markdown_to_html():
+    pass
+
+def rewrite_blogpost_json():
+    pass
+
+def main():
+    args = parse_arguments()
+    info("start publishing")
+
+    parse_markdown_file()
+    convert_markdown_to_html()
+    rewrite_blogpost_json()
+
+
+    info("published.")
+    exit(0)
+
+if __name__ == "__main__":
+    main()
+

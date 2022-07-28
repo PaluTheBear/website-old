@@ -1,31 +1,36 @@
 import HeroTile from "./tiles/HeroTile";
-import exampleImage from "./tiles/capitan.jpg";
 import BlogPreviewTile from "./tiles/BlogPreviewTile";
 import MainpagePresentation from "./tiles/MainpagePresentation";
 import {IBlogPreviewProps} from "./tiles/BlogPreview";
-import {lorem} from "../util/Helperfunctions";
+import postJson from "../posts.json"
+import { createLinkFromDateAndTitle  } from "../util/Helperfunctions"
 
-const getArticles = ():IBlogPreviewProps[] => {
-    const articles = [
-        {title: "This is a Title", subtitle: lorem(), author:"Me", picture:exampleImage, date: new Date('December 1, 2020')},
-        {title: "This is a Title", subtitle: lorem(), author:"Me", picture:exampleImage, date: new Date('July 20, 2020')},
-        {title: "This is a Title", subtitle: lorem(), author:"Me", picture:exampleImage, date: new Date('August 17, 2020')},
-        {title: "This is a Title", subtitle: lorem(), author:"Me", picture:exampleImage, date: new Date('January 11, 2021')},
-        {title: "This is a Title", subtitle: lorem(), author:"Me", picture:exampleImage, date: new Date('March 14, 2021')},
-        {title: "This is a Title", subtitle: lorem(), author:"Me", picture:exampleImage, date: new Date('April 27, 2021')}
-    ]
+const getArticles = () => {
+    const articles: IBlogPreviewProps[] = postJson.articles.map( (it) => {
+        const artcl: IBlogPreviewProps = {
+            title: it.title,
+            subtitle: it.subtitle,
+            author: it.author,
+            date: new Date(it.date),
+            picture: createLinkFromDateAndTitle(new Date(it.date), it.title) + "/preview.png"
+        };
 
-    return articles.sort((firstEl, secondEl) => firstEl.date.toISOString() < secondEl.date.toISOString() ? 1 : -1)
+        return artcl;
+    })
+
+    return articles;
 }
 
 const Home = () => {
+    const articles = getArticles();
+
     return (
         <div className="main-wrapper">
             <HeroTile>
                 {() => <MainpagePresentation />}
             </HeroTile>
-            {false &&
-                <BlogPreviewTile blogArticles={getArticles()} />
+            {articles.length > 2 &&
+                <BlogPreviewTile blogArticles={articles} />
             }
         </div>
     )

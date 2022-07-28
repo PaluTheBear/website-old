@@ -1,8 +1,12 @@
 
 const createLinkFromDateAndTitle = (date: Date, title: string) => {
+    return "/blog/" + createKeyFromDateAndTitle(date, title);
+}
+
+const createKeyFromDateAndTitle = (date: Date, title: string) => {
     const trimmedTitle = title.toLowerCase().replaceAll(" ", "");
-    const trimmedDate = date.toISOString().substring(0,10)
-    return trimmedDate + "-" + trimmedTitle
+    const trimmedDate = date.toISOString().substring(0,10);
+    return trimmedDate + '-' + trimmedTitle;
 }
 
 const lorem = (size?: number) => {
@@ -31,4 +35,4 @@ const lorem = (size?: number) => {
     return LOREM.substring(0, size)
 }
 
-export { createLinkFromDateAndTitle, lorem };
+export { createLinkFromDateAndTitle, createKeyFromDateAndTitle, lorem };
