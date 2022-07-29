@@ -12,7 +12,7 @@ const MainpagePresentation = () => {
                 </div>
             </div>
             <div className="hero-column">
-                <img id="hero-image" src={portrait} alt="Paul Alpen 2021" />
+                <img id="hero-image" src={portrait} alt="Portrait of Paul Mayer" />
             </div>
         </div>
     )}
