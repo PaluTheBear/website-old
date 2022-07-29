@@ -1,6 +1,6 @@
 .App {
-    width: calc(100vw - 2em);
-    margin: 1em 1em 1em 1em;
+    width: calc(100vw);
+    margin: 0em 1em 1em 1em;
 }
 
 .main-wrapper {

@@ -5,7 +5,7 @@
 
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -13,7 +13,7 @@
 
 .footer img{
     width: 1.5em;
-    margin: 0.5em 1em 0.5em 1em;
+    margin: 0.5em 1em 0.4em 1em;
     filter: saturate(0%) brightness(70%) contrast(1000%) invert(var(--inverse-filter));
 }
 

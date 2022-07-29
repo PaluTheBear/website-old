@@ -1,19 +1,19 @@
 #hero-wrapper {
     width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+
     display: flex;
     flex-wrap: wrap;
-    margin-top: 8vh;
+
+    margin-top: 0;
+    padding-top: 0;
 
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-
-    padding-top: 5em;
-    padding-bottom: 5em;
 }
 
 @media screen and (max-width: 450px) {
     #hero-wrapper {
-        padding-top: 1em;
-        padding-bottom: 1em;
     }
 }
