@@ -1,5 +1,5 @@
 .App {
-    width: calc(100vw);
+    width: calc(100vw - 2em);
     margin: 0em 1em 1em 1em;
 }
 
