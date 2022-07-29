@@ -39,6 +39,7 @@
     }
 
     #hero-image {
+        margin-top: 10vh;
         width: 70%;
     }
 }
@@ -65,5 +66,5 @@
     #hero-image {
         width: 700px;
     }
-
 }
+
