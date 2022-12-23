@@ -30,7 +30,9 @@ const Home = () => {
             <HeroTile>
                 {() => <MainpagePresentation />}
             </HeroTile>
-            <BlogPreviewTile blogArticles={articles} />
+            {articles.length > 1 && 
+                <BlogPreviewTile blogArticles={articles} />
+            }
         </div>
     )
 }
