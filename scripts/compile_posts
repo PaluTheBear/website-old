@@ -1,0 +1,41 @@
+#!/bin/bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+cd $SCRIPT_DIR
+cd ..
+pwd
+
+printf "clear old files... "
+rm ./public/blog/*.html
+printf "done\n"
+
+files=$(find ./posts -name "*.md")
+for file in $files; do
+	basefile=$(basename -s .md $file)
+	printf "compiling ${file}... "
+	sleep .5
+  pandoc --template ./templates/htmltemplate.html -o "./public/blog/${basefile}.html" "./posts/${basefile}.md"
+	printf "done\n"
+done
+
+sleep 1.5
+printf "build posts.json... "
+
+jsonstringbuilder='{
+  "articles": ['
+
+for file in $files; do
+	# process files to json file...
+	basefile=$(basename -s .md $file)
+	json_artifact=$(pandoc --template ./templates/jsontemplate.json ${file})
+	json_artifact="${json_artifact//<filename>/$basefile}"
+	jsonstringbuilder="${jsonstringbuilder}${json_artifact},"
+done
+
+posts_json="${jsonstringbuilder::-1}]}"
+echo $posts_json > src/posts.json
+
+printf "done\n"
+exit 0
+

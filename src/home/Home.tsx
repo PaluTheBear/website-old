@@ -12,7 +12,8 @@ const getArticles = () => {
             subtitle: it.subtitle,
             author: it.author,
             date: new Date(it.date),
-            picture: createLinkFromDateAndTitle(new Date(it.date), it.title) + "/preview.png"
+            filelink: `/blog/${it.filename}.html`,
+            preview: `/blog/img/${it.preview}`
         };
 
         return artcl;
@@ -29,9 +30,7 @@ const Home = () => {
             <HeroTile>
                 {() => <MainpagePresentation />}
             </HeroTile>
-            {articles.length > 2 &&
-                <BlogPreviewTile blogArticles={articles} />
-            }
+            <BlogPreviewTile blogArticles={articles} />
         </div>
     )
 }

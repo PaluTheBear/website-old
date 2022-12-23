@@ -1,16 +1,1 @@
-{
-  "articles": [
-    {
-      "title": "This is a Title",
-      "subtitle": "Lorem Ipsum Coffee Nutellabrot Ahoi Witzig Blume",
-      "author": "Me",
-      "date": "2022-02-27"
-    },
-    {
-      "title": "This is a Post about making soup",
-      "subtitle": "Lorem Ipsum Coffee Nutellabrot Ahoi Witzig Blume",
-      "author": "Paul Mayer",
-      "date": "2022-07-22"
-    }
-  ]
-}
+{ "articles": [{ "title": "Über Sprache und Resilienz", "subtitle": "", "author": "Paul Mayer", "date": "2022-07-22", "filename": "sprache_und_resilienz", "preview": "peach.png" }]}

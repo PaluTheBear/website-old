@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta name="title" content="Über Sprache und Resilienz">
+    <meta name="date" content="2022-07-22">
+        <meta name="author" content="Paul Mayer">
+        <meta
+            name="description"
+            content="Über Sprache und Resilienz"
+    />
+    <title>Über Sprache und Resilienz</title>
+
+    <meta charset="utf-8"/>
+    <link rel="icon" href="public/img/logo-192.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#f6f6f6" />
+
+    <link rel="apple-touch-icon" href="public/logo192.png"/>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="public/manifest.json"/>
+
+    <link rel="stylesheet" href="/blog/blog.css">
+    <script>
+        let theme = localStorage.getItem("theme") || "Light";
+        document.documentElement.setAttribute("color-theme", theme);
+    </script>
+</head>
+
+<body>
+<div id="root">
+    <div class="App">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-link">
+                    <a href="/">PM</a>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="nav-item" href="/">
+                    Home
+                </a>
+                <a class="nav-item" href="/about">
+                    Contact
+                </a>
+            </div>
+        </div>
+        <div class="content-wrapper" id="hero-wrapper">
+            <div class="hero">
+                <div class="hero-column">
+                    <div>
+                        <h1>Über Sprache und Resilienz</h1>
+                                                    <h3>By Paul Mayer</h3>
+                                                <h4>2022-07-22</h4>
+                    </div>
+                </div>
+                <div class="hero-column">
+                    <img id="hero-image" src="/blog/img/" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div id="text-tile-wrapper" class="content-wrapper">
+                <div id="text-entry">
+                    <h1 id="ich-mag-kekse">Ich mag Kekse</h1>
+                    <p>Absatz 1</p>
+                    <h2 id="subtitle">subtitle</h2>
+                    <p>Absatz 2</p>
+                    <h2 id="subtitle-1">subtitle</h2>
+                    <p>Absatz 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

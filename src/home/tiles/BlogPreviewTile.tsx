@@ -8,12 +8,13 @@ type BlogPreviewTileProps = {
 
 const BlogPreviewTile = (props: BlogPreviewTileProps) => {
     const articles = props.blogArticles.map( article => <BlogPreview
-        key={createLinkFromDateAndTitle(article.date, article.title)}
+        key={article.filelink}
         title={article.title}
         subtitle={article.subtitle}
-        picture={article.picture}
+        preview={article.preview}
         author={article.author}
         date={article.date}
+        filelink={article.filelink}
     />)
 
     return (
