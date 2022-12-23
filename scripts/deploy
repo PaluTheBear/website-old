@@ -6,5 +6,5 @@ cd $SCRIPT_DIR
 cd ..
 
 source scripts/compile_posts
-npm deploy
+npm run deploy
 
